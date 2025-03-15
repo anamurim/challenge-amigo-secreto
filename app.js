@@ -1,15 +1,15 @@
-let amigo = '';
+//let amigo = '';
 let listaDeAmigos = [];
 //let quantidadeDeAmigos = 0;
 let amigoSecreto = gerarAmigoAleatorio();
 
 
 function adicionarAmigo(){
-    amigo = document.querySelector('input').value;
+    listaDeAmigos = document.querySelector('input').value;
 
-    if(amigo){
+    if(listaDeAmigos){
         //quantidadeDeAmigos =+ 1;
-        listaDeAmigos = amigo;
+        //listaDeAmigos = amigo;
         alert(`${listaDeAmigos} adicionado à lista`);
         limparCampo();
     }else{
@@ -18,6 +18,7 @@ function adicionarAmigo(){
 }
 
 function atulizarListaDeAmigos(){
+    
     
 }
 
