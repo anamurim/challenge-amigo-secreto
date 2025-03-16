@@ -19,10 +19,6 @@ function adicionarAmigo(){
         alert(`${amigos} adicionado à lista`);
         //adicionaAmigo = "";
     }
-
-     
-        
-
 }
 
 //Atualizar lista de amigos
