@@ -29,7 +29,7 @@ function adicionarAmigo(){
 
 //Atualizar lista de amigos
 function atulizarListaDeAmigos(){
-    const listaAmigos = document.getElementById(listaAmigos);
+    const listaAmigos = document.getElementById('listaAmigos');
 
     listaAmigos.innerHTML = "";
 
