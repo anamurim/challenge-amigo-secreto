@@ -1,6 +1,4 @@
 let amigos = [];
-//let listaDeAmigos = [];
-//let quantidadeDeAmigos = amigos.length; //Conta quantos itens tem em amigos
 let amigoSecreto = gerarAmigoAleatorio();
 
 //Função para adicionar amigos
@@ -17,10 +15,12 @@ function adicionarAmigo(){
         
         amigos.push(novoAmigo);
         alert(`${amigos} adicionado à lista`);
-        adicionaAmigo.innerHTML  = "";
-
+       
         atualizarListaDeAmigos();
     }
+
+    adicionaAmigo.innerHTML  = "";
+
 
     if(amigos == novoAmigo){
         alert(`${novoAmigo} já está na lista.`);
