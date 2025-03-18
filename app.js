@@ -1,49 +1,52 @@
 let amigos = [];
-let amigoSecreto = gerarAmigoAleatorio();
 
 //Função para adicionar amigos
 function adicionarAmigo(){
-    const adicionaAmigo = document.getElementById('amigo').value;
-    const novoAmigo = adicionaAmigo;
+    const adicionaAmigo = document.getElementById('amigo');
+    const novoAmigo = adicionaAmigo.value.trim();
 
-
-    if(adicionaAmigo == ""){
+    if(novoAmigo == ""){
         alert('Por favor, insira um nome!');
-    }else{
-        //quantidadeDeAmigos =+ 1
-        //listaDeAmigos = amigo;
-        
-        amigos.push(novoAmigo);
-        alert(`${amigos} adicionado à lista`);
-       
-        atualizarListaDeAmigos();
+        return;
     }
-
-    adicionaAmigo.innerHTML  = "";
-
-
+    
     if(amigos == novoAmigo){
         alert(`${novoAmigo} já está na lista.`);
+        adicionaAmigo.value = "";
+        return;
     }
+    
+    amigos.push(novoAmigo);
+    ///alert(`${novoAmigo} adicionado à lista.`);
+       
+    adicionaAmigo.value = "";
+    atualizarLista();
 }
 
 //Atualizar lista de amigos
-function atulizarListaDeAmigos(){
+function atulizarLista(){
     const listaAmigos = document.getElementById('listaAmigos');
 
     listaAmigos.innerHTML = "";
 
     for(let i = 0; i < amigos.length; i++){
-        const lista = document.createElement('li');
-        lista.textContent = amigos[i];
+        const li = document.createElement('li');
+        li.textContent = amigos[i];
         listaAmigos.appendChild(li);
     }
-    
 }
 
+function sortearAmigo(){
+    if(amigos.length == 0){
+        alert("Não há nomes cadastrados!");
+        return;
+    }
 
-/*function limparCampo(){
-    chute = document.querySelector('input');
-    chute.value = '';
+    const indiceAmigo = parseInt(Math.random() * amigos.length);
+
+    const amigoSecreto = amigos[indiceAmigo];
+
+    const resultado = document.getElementById('resultado');
+
+    resultado.innerHTML = `Amigo sorteado: <strong>${amigoSecreto}</strong>`;
 }
-*/
