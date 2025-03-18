@@ -17,7 +17,13 @@ function adicionarAmigo(){
         
         amigos.push(novoAmigo);
         alert(`${amigos} adicionado à lista`);
-        //adicionaAmigo = "";
+        adicionaAmigo.innerHTML  = "";
+
+        atualizarListaDeAmigos();
+    }
+
+    if(amigos == novoAmigo){
+        alert(`${novoAmigo} já está na lista.`);
     }
 }
 
