@@ -1,7 +1,7 @@
-<h1>Desafio do Amigosecreto</h1>
+<h1>Desafio do Amigo secreto</h1>
 <h2>🔖 Sobre</h2>
 <p>Projeto desenvolvido no curso de programação da Alura.</p>
-<p> Aplicativo desenvolvido para sortear um amigo de uma lista de amigos</p>
+<p>Aplicativo desenvolvido para sortear um amigo de uma lista de amigos</p>
 
 ## 🚀 Tecnologias
 
